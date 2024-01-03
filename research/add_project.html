@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<!--
+    Modified version of Editorial by HTML5 UP <https://html5up.net/editorial>
+    Adapted by Jessica De Silva <https://github.com/jessicadesilva>
+    Converted to Flask project by August Frisk <https://github.com/4N0NYM0U5MY7H>
+
+    Original version information:
+    Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license <https://html5up.net/license>
+-->
+<html lang="en-US">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <title>Add Project</title>
+
+        <!-- Local CSS file for styling the application -->
+        <link rel="stylesheet" type="text/css" href="../static/css/main.css" />
+        <!-- Additional styling --></head>
+
+    <body class="is-preload">
+        <!-- Wrapper -->
+        <div id="wrapper">
+            <!-- Main -->
+            <div id="main">
+                <div class="inner">
+                    <!-- Header --><header id="header">
+    <a href="../home.html" class="logo"><strong>Dr. Jessica De Silva</strong> California State
+        University, Stanislaus</a>
+    <ul class="icons">
+        <li><img src="../static/images/stan_logo.png" width="10%"
+                alt="California State University, Stanislaus shield logo." /></li>
+    </ul>
+</header><!-- Messages --><!-- Main Content --><section>
+    <header class="major">
+        <h1 class="h2">Add New Project</h1>
+    </header>
+    <form id="project_form" method="POST" action="add_project.html" enctype="multipart/form-data">
+        <div class="col-12">
+    <input id="csrf_token" name="csrf_token" type="hidden" value="ImZlMzk2YTA3ZDE4OWQwZGNjMjI0NjQ3NDM5MDc1ZWUzY2NlOTQ4MGEi.ZZW4eQ.aWduCHbapkzCl6Oakn_xkC4xGPM">
+</div>
+<!-- Project type and status -->
+<fieldset class="box row gtr-uniform">
+    <div class="col-6 col-12-xsmall">
+        <label for="type_id">Project Type</label><select id="type_id" name="type_id" required><option value="0">Select a project type...</option><option value="1">project</option><option value="2">abstract</option></select>
+    </div>
+    <div class="col-6 col-12-xsmall">
+        <label for="status_id">Undergrad Status</label><select id="status_id" name="status_id" required><option value="0">Select a project status...</option><option value="1">current</option><option value="2">former</option></select>
+    </div>
+</fieldset>
+<!-- Project image options -->
+<fieldset class="box row gtr-uniform">
+    <legend>If no image is selected, <code>default.jpg</code> will be used.</legend>
+    <div class="col-6 col-12-xsmall">
+        <label for="image">Existing Image</label>optional<select id="image" name="image"><option value="default.jpg">Select a project image...</option><option value="andrew_and_jasmin.jpg">andrew_and_jasmin.jpg</option><option value="campus_map.png">campus_map.png</option><option value="CNN_image.png">CNN_image.png</option><option value="darcy_and_juan.png">darcy_and_juan.png</option><option value="default.jpg">default.jpg</option><option value="disjoint.jpg">disjoint.jpg</option><option value="ev_charging.jpeg">ev_charging.jpeg</option><option value="gerrymandering.jpg">gerrymandering.jpg</option><option value="jesselynn.png">jesselynn.png</option><option value="kevin.jpg">kevin.jpg</option><option value="ramsey.jpg">ramsey.jpg</option><option value="rommell.jpg">rommell.jpg</option><option value="shirley_and_aaron.png">shirley_and_aaron.png</option></select>
+    </div>
+    <div class="col-6 col-12-xsmall">
+        <label for="upload">Upload New Image</label>optional<br /><input id="upload" name="upload" type="file">
+    </div>
+</fieldset>
+<!-- Project details -->
+<fieldset class="box row gtr-uniform">
+    <div class="col-12">
+        <label for="students">Students</label><textarea class="ckeditor " id="students" name="students" required>
+</textarea>
+    </div>
+    <div class="col-12">
+        <label for="advisors">Advisors</label>optional<textarea class="ckeditor " id="advisors" name="advisors">
+</textarea>
+    </div>
+    <div class="col-12">
+        <label for="majors">Majors</label>optional<input id="majors" name="majors" type="text" value="">
+    </div>
+</fieldset>
+<!-- Project description -->
+<fieldset class="box row gtr-uniform">
+    <div class="col-12">
+        <label for="title">Project Title</label><input id="title" name="title" required type="text" value="">
+    </div>
+    <div class="col-12">
+        <label for="description">Project Description</label><textarea class="ckeditor " id="description" name="description" required>
+</textarea>
+    </div>
+    <div class="col-12">
+        <label for="link">Project Link</label>optional<textarea class="ckeditor " id="link" name="link">
+</textarea>
+    </div>
+</fieldset>
+        <div class="col-12">
+            <ul class="actions">
+                <li><input class="primary" type="submit" value="Add Project" name="add_project" /></li>
+                <li><a href="undergrad/current.html" class="button">Cancel</a></li>
+            </ul>
+        </div>
+    </form>
+</section></div>
+            </div>
+            <!-- Sidebar --><div id="sidebar">
+    <div class="inner"><nav id="menu">
+    <header class="major">
+        <h2>Menu</h2>
+    </header>
+    <ul>
+        <li><a href="../home.html">Homepage</a></li>
+        <li>
+            <span class="opener">Events</span>
+            <ul>
+                <li><a href="../events/future.html">Upcoming Events</a></li>
+                <li><a href="../events/past.html">Past Events</a></li>
+            </ul>
+        </li>
+        <li><a href="../news.html">Student News</a></li>
+        <li>
+            <span class="opener">Research</span>
+            <ul>
+                <li><a href="undergrad/current.html">Current Undergraduate Projects</a>
+                </li>
+                <li><a href="undergrad/former.html">Former Undergraduate Projects</a></li>
+                <li><a href="other.html">Other Projects</a></li>
+            </ul>
+        </li>
+        <li>
+            <span class="opener">Mentorship Groups</span>
+            <ul>
+                <li><a href="../mentor_groups/math.html">For Mathematics</a></li>
+                <li><a href="../mentor_groups/stan.html">For Stan State Students</a></li>
+            </ul>
+        </li>
+        <li><a href="../about.html">About Me</a></li>
+    </ul>
+</nav><!-- Section -->
+        <section>
+            <header class="major">
+                <h2>Get in touch</h2>
+            </header>
+            <ul class="contact">
+                <li class="icon solid fa-envelope">
+                    <a href="mailto:jdesilva1@csustan.edu">jdesilva1[at]csustan.edu</a>
+                </li>
+            </ul>
+        </section><footer id="footer">
+    <p class="copyright">&copy; Jessica De Silva's Homepage. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+</footer></div>
+</div></div>
+
+        <!-- Scripts -->
+        <script src="../static/js/jquery.min.js"></script>
+        <script src="../static/js/browser.min.js"></script>
+        <script src="../static/js/breakpoints.min.js"></script>
+        <script src="../static/js/util.js"></script>
+        <script src="../static/js/main.js"></script>
+        <!-- Additional scripts --><script src="../static/ckeditor/basic/ckeditor.js"></script>
+
+<script type="text/javascript">
+    document.getElementById("advisors").classList.remove("ckeditor");
+    CKEDITOR.replace( "advisors", {
+        language: "",
+        height: 60,
+        width: 0,
+        codeSnippet_theme: "monokai_sublime",
+        imageUploadUrl: "",
+        filebrowserUploadUrl: "",
+        filebrowserBrowseUrl: "",
+        extraPlugins: "",
+        
+                fileTools_requestHeaders: {
+                    'X-CSRFToken': 'ImZlMzk2YTA3ZDE4OWQwZGNjMjI0NjQ3NDM5MDc1ZWUzY2NlOTQ4MGEi.ZZW4eQ.aWduCHbapkzCl6Oakn_xkC4xGPM',
+                }, // CSRF token header for XHR request
+        removePlugins: [ 'about', 'floatingspace', 'indent', 'indentlist', 'list', 'notification',
+'spellchecker', 'uibutton', 'undo' ], toolbar: [{ name: 'basicstyles', items: [ 'Bold', 'Italic' ]}, { name: 'links',
+items: [ 'Link', 'Unlink' ]}]
+    });
+</script>
+
+<script type="text/javascript">
+    document.getElementById("students").classList.remove("ckeditor");
+    CKEDITOR.replace( "students", {
+        language: "",
+        height: 60,
+        width: 0,
+        codeSnippet_theme: "monokai_sublime",
+        imageUploadUrl: "",
+        filebrowserUploadUrl: "",
+        filebrowserBrowseUrl: "",
+        extraPlugins: "",
+        
+                fileTools_requestHeaders: {
+                    'X-CSRFToken': 'ImZlMzk2YTA3ZDE4OWQwZGNjMjI0NjQ3NDM5MDc1ZWUzY2NlOTQ4MGEi.ZZW4eQ.aWduCHbapkzCl6Oakn_xkC4xGPM',
+                }, // CSRF token header for XHR request
+        removePlugins: [ 'about', 'floatingspace', 'indent', 'indentlist', 'list', 'notification',
+'spellchecker', 'uibutton', 'undo' ], toolbar: [{ name: 'basicstyles', items: [ 'Bold', 'Italic' ]}, { name: 'links',
+items: [ 'Link', 'Unlink' ]}]
+    });
+</script>
+
+<script type="text/javascript">
+    document.getElementById("description").classList.remove("ckeditor");
+    CKEDITOR.replace( "description", {
+        language: "",
+        height: 0,
+        width: 0,
+        codeSnippet_theme: "monokai_sublime",
+        imageUploadUrl: "",
+        filebrowserUploadUrl: "",
+        filebrowserBrowseUrl: "",
+        extraPlugins: "",
+        
+                fileTools_requestHeaders: {
+                    'X-CSRFToken': 'ImZlMzk2YTA3ZDE4OWQwZGNjMjI0NjQ3NDM5MDc1ZWUzY2NlOTQ4MGEi.ZZW4eQ.aWduCHbapkzCl6Oakn_xkC4xGPM',
+                }, // CSRF token header for XHR request
+        removePlugins: [ 'about', 'floatingspace', 'indent', 'indentlist', 'list', 'notification',
+'spellchecker', 'uibutton', 'undo' ], toolbar: [{ name: 'basicstyles', items: [ 'Bold', 'Italic' ]}, { name: 'links',
+items: [ 'Link', 'Unlink' ]}]
+    });
+</script>
+
+<script type="text/javascript">
+    document.getElementById("link").classList.remove("ckeditor");
+    CKEDITOR.replace( "link", {
+        language: "",
+        height: 60,
+        width: 0,
+        codeSnippet_theme: "monokai_sublime",
+        imageUploadUrl: "",
+        filebrowserUploadUrl: "",
+        filebrowserBrowseUrl: "",
+        extraPlugins: "",
+        
+                fileTools_requestHeaders: {
+                    'X-CSRFToken': 'ImZlMzk2YTA3ZDE4OWQwZGNjMjI0NjQ3NDM5MDc1ZWUzY2NlOTQ4MGEi.ZZW4eQ.aWduCHbapkzCl6Oakn_xkC4xGPM',
+                }, // CSRF token header for XHR request
+        removePlugins: [ 'about', 'basicstyles', 'floatingspace', 'indent', 'indentlist', 'list',
+'notification', 'spellchecker', 'uibutton', 'undo' ], toolbar: [{ name: 'links', items: [ 'Link', 'Unlink' ]}]
+    });
+</script></body>
+
+</html>

@@ -12,17 +12,15 @@
 <html lang="en-US">
 
     <head>
-        
-        <meta charset="UTF-8" />
+        <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        
-        <title>Current Undergraduate Projects</title>
-        
-        <link rel="stylesheet" href="../../../static/css/main.css" />
-        
-        
-    </head>
+
+        <title>Current Undergraduate Abstracts</title>
+
+        <!-- Local CSS file for styling the application -->
+        <link rel="stylesheet" type="text/css" href="../../../static/css/main.css" />
+        <!-- Additional styling --></head>
 
     <body class="is-preload">
         <!-- Wrapper -->
@@ -30,171 +28,50 @@
             <!-- Main -->
             <div id="main">
                 <div class="inner">
-                    
-                    <header id="header">
-    <a href="../../../index.html" class="logo"><strong>Dr. Jessica De
-            Silva</strong> California State University, Stanislaus</a>
+                    <!-- Header --><header id="header">
+    <a href="../../../home.html" class="logo"><strong>Dr. Jessica De Silva</strong> California State
+        University, Stanislaus</a>
     <ul class="icons">
-        <li><img src="../../../static/images/stanlogo.png" width="10%"
+        <li><img src="../../../static/images/stan_logo.png" width="10%"
                 alt="California State University, Stanislaus shield logo." /></li>
     </ul>
-</header>
-                    
-                    
-<section>
+</header><!-- Messages --><!-- Main Content --><section>
     <header class="major">
-        <h2>Current Undergraduate Projects</h2>
-    </header>
-    <div class="posts">
-        <article>
-            <a class="image"><img src="../../../static/images/darcyandjuan.png"
-                    alt="Abstract image of a circle with overlapping shapes." /></a>
-            <h3>Hypergraph-Based Image Segmentation</h3>
-            <h4>Students: Darcy & Juan<br>Majors: Mathematics</h4>
-            <p>During the summer of 2020, we had the opportunity to participate in the <a
-                    href="https://science.osti.gov/wdts/vfp" target="_blank" rel="noreferrer noopener external"
-                    alt="(opens in new tab)">Visiting Faculty Program (VFP)</a> at Lawrence Berkeley National
-                Laboratory. During this 10 week program, we worked under <a href="https://tperciano.wixsite.com/home"
-                    target="_blank" rel="noreferrer noopener external" alt="(opens in new tab)">Talita Perciano</a> from
-                the Data Analytics and Visualization research group at LBNL. I met Talita when I participated in the <a
-                    href="http://shinstitute.org/srp-application/" target="_blank" rel="noreferrer noopener external"
-                    alt="(opens in new tab)">Sustainable Research Pathways Workshop</a>. Although a virtual summer
-                research program wasn't ideal, we still had a lot of fun learning about graph theory, image
-                segmentation, and how to code in C++.</p>
-            <p>This semester, both Darcy and Juan are supported by the Stan State <a
-                    href="https://www.csustan.edu/office-research-sponsored-programs/sersca-program" target="_blank"
-                    rel="noreferrer noopener external" alt="(opens in new tab)">SERSCA</a> program.
-            </p>
-            <a id="abstract">
-                <p>Abstract: X-ray micro-tomography (&mu;-CT) is a non-destructive 3D imaging technique often used to
-                    image material samples. The Advanced Light Source at Berkeley National Laboratory houses a
-                    synchroton-based &mu;-CT instrument which produces high volumes of data at a fast rate. This has led
-                    to the need for image processing techniques capable of extracting valuable information in large
-                    complex data sets. Image segmentation is an important processing step which separates various
-                    components in an image. Graph-based segmentation algorithms have been used for many years, with
-                    current interest primarily in designing algorithms which can handle large data sets. Recent
-                    approaches using Markov Random Fields (MRFs) exploit local properties of MRFs to run computations in
-                    parallel. In this project, we developed an image segmentation algorithm using a hypergraph-based MRF
-                    model. The algorithm is coded in C++ and preliminary results indicate that this generalized model
-                    improves precision of the segmentation of &mu;-CT images. We still have a lot left to do, but we are
-                    excited about the results so far!</p>
-            </a>
-        </article>
-        <article>
-            <a class="image"><img src="../../../static/images/andrewandjasmin.jpg"
-                    alt="HTML file open in a text editor." /></a>
-            <h3>Mean-Shift Clustering in C++</h3>
-            <h4>Students: Andrew & Jasmin<br>Majors: Computer Science & Mathematics</h4>
-            <p>In the VFP image segmentation algorithm, we applied the k-means clustering algorithm to create the
-                hypergraph model for the image. In other hypergraph-based segmentation algorithms, mean-shift clustering
-                also produced great results. However, we did not find a suitable C++ implementation of the mean-shift
-                algorithm. Andrew and Jasmin are working together to understand the Python implementation of the
-                mean-shift algorithm and bandwidth approximation in order to reproduce it in C++. We hope to then be
-                able to incorporate this in the image segmentation algorithm and compare results to that of the k-means
-                version.</p>
-            <p>Andrew and Jasmin are both supported by <a href="https://www.csustan.edu/AMP/join" target="_blank"
-                    rel="noreferrer noopener external" alt="(opens in new tab)">CSU-LSAMP</a>.</p>
-        </article>
-        <article>
-            <a class="image"><img src="../../../static/images/kevin.jpg"
-                    alt="Person holding a smartphone with the Pokemon Go application open." /></a>
-            <h3>Pokemon GO! PVP Optimization</h3>
-            <h4>Co-Advisor: Dr. Jon Brown (Bakersfield College)<br>
-                Students: Kevin, Pablo (BC), Ed (BC)<br>Majors: Computer Science</h4>
-            <p>This project was brought to us by Dr. Brown from Bakersfield College who I met through the <a
-                    href="https://www.pacificmathalliance.org/" target="_blank" rel="noreferrer noopener external"
-                    alt="(opens in new tab)">Pacific Math Alliance</a>. Funny enough, Dr. Brown is also an alumnus from
-                Stan State! He has worked with BC students in the past to apply game theory to analyze <a
-                    href="https://www.pokemongolive.com/en/" target="_blank" rel="noreferrer noopener external"
-                    alt="(opens in new tab)">Pokemon GO!</a>. In this project, we are interested in analyzing PVP
-                battles in which you choose three of your Pokemon to fight three of your opponent's Pokemon. You can
-                swap between any of your three Pokemon throughout the battle and can shield against charge attacks
-                exactly twice. The player wins if they defeat all their opponent's Pokemon, or if the match time ends
-                and they have the most Pokemon/health remaining.</p>
-            <p>Kevin is supported by the Stan State <a
-                    href="https://www.csustan.edu/STEM-success/research-and-immersion-stem-excellence" target="_blank"
-                    rel="noreferrer noopener external" alt="(opens in new tab)">RISE</a> program.
-            </p>
-        </article>
-        <article>
-            <a class="image"><img src="../../../static/images/jesselynn.png"
-                    alt="Migration pattern of Zebrafish embryo." /></a>
-            <h3>Modeling Embryo Cell Migration and Adhesion</h3>
-            <h4>Student: Jesselynn<br>Major: Mathematics</h4>
-            <p>In this collaboration, I have had so much fun learning about cellular biology from Jesselynn. Jesselynn
-                is a Lab Assistant in Dr. Stephanie Woo's lab at UC Merced while being a full-time math major at Stan
-                State. In the Woo Lab, Jesselynn captures videos of zebrafish embryo cells migrating to uniformly spread
-                out before coming together to form an endodermal sheet. We are using Fiji/ImageJ to obtain data from
-                these videos which we will then analyze in Python to better understand cell migration.</p>
-            <p>Jesselynn is supported by the Stan State <a
-                    href="https://www.csustan.edu/STEM-success/research-and-immersion-stem-excellence" target="_blank"
-                    rel="noreferrer noopener external" alt="(opens in new tab)">RISE</a> program.
-            </p>
-            <ul class="actions">
-                <li><a href="http://stephaniewoo.ucmerced.edu/" target="_blank" rel="noreferrer noopener external"
-                        alt="(opens in new tab)" class="button">DR. WOO'S LAB</a></li>
-            </ul>
-        </article>
-        <article>
-            <a class="image"><img src="../../../static/images/shirleyandaaron.png"
-                    alt="Tables and charts containing a sample of course enrollment numbers, average class size, and full-time equivalent students taught." /></a>
-            <h3>Predictive Modeling of Mathematics Course Enrollment and Success</h3>
-            <h4>Students: Aaron & Sherly<br>Majors: Mathematics</h4>
-            <p>We our working with Stan State's <a href="https://www.csustan.edu/iea" target="_blank"
-                    rel="noreferrer noopener external" alt="(opens in new tab)">Institutional Effectiveness and
-                    Analytics (IEA)</a> team to study recent trends in our mathematics major courses. In recent
-                semesters, the Mathematics Department has needed to offer more sections of lower and upper divison
-                mathematics courses. This project aims to first apply statistical methods to analyze the recent increase
-                in enrollment, and then we will later develop a Machine Learning model to predict enrollment rates for
-                course offerings in the mathematics major.</p>
-            <p>Aaron & Sherly are both supported as a PUMP Undergraduate Research Group (URG) and through the Stan State
-                <a href="https://www.csustan.edu/STEM-success/research-and-immersion-stem-excellence" target="_blank"
-                    rel="noreferrer noopener external" alt="(opens in new tab)">RISE</a> program.
-            </p>
-            <ul class="actions">
-                <li><a href="http://www.pump-math.org/undergraduate-research-groups" target="_blank"
-                        rel="noreferrer noopener external" alt="(opens in new tab)" class="button">PUMP PROGRAM</a>
-                </li>
-            </ul>
-        </article>
-        <article>
-            <a class="image"><img src="../../../static/images/rommell.jpg"
-                    alt="Runner with a baton on crouching on a track at the starting line." /></a>
-            <h3>Predictive Modeling of Track Performances</h3>
-            <h4>Student: Rommell<br>Major: Physics</h4>
-            <p>Rommell has a passion for running track, he was an all-star athlete in high school and even competed on
-                Stan State's track team. Using data from <a href="athletic.net" target="_blank"
-                    rel="noreferrer noopener external" alt="(opens in new tab)">Athletic.net</a>, we are analyzing how
-                an athlete's 800 meter time is related to their gender, grade level, and season records for the 400
-                meter and/or 1600 meter. It is often believed that there are strong correlations between these events,
-                the best 400m runners often do very well in the 800m and similarly for the 1600m. We have put this
-                project on pause at the moment, but we have managed to get about 40,000 data points to work with so far
-                and have started cleaning it up for analysis.</p>
-            <p>Rommell is in the Cal-Bridge program for undergraduates studying astronomy and/or physics.</p>
-            <ul class="actions">
-                <li><a href="https://www.cpp.edu/calbridge/" target="_blank" rel="noreferrer noopener external"
-                        alt="(opens in new tab)" class="button">CAL-BRIDGE</a></li>
-            </ul>
-        </article>
-    </div>
-</section>
-
-                </div>
+        <h2 class="h2">Current
+            Undergraduate Abstracts</h2></header><div class="posts"><article id="18">
+    
+    <a class="image"><img src="../../../static/images/projects/darcy_and_juan.png" /></a>
+    <h2 class="h3">Mean-Shift Clustering in C++</h2><h3 class="h4">Students: Darcy &amp; Juan</h3><h4 class="h5">Majors: Mathematics</h4><p>During the summer of 2020, we had the opportunity to participate in the <a href="https://science.osti.gov/wdts/vfp">Visiting Faculty Program (VFP) at Lawrence Berkeley National Laboratory</a>. During this 10 week program, we worked under <a href="https://tperciano.wixsite.com/home">Talita Perciano</a> from the Data Analytics and Visualization research group at LBNL. I met Talita when I participated in the <a href="http://shinstitute.org/srp-application/">Sustainable Research Pathways Workshop</a>. Although a virtual summer research program wasn&#39;t ideal, we still had a lot of fun learning about graph theory, image segmentation, and how to code in C++.</p><p>This semester, both Darcy and Juan are supported by the <a href="https://www.csustan.edu/office-research-sponsored-programs/sersca-program">Stan State SERSCA program</a>.</p><p>Abstract: X-ray micro-tomography (&mu;-CT) is a non-destructive 3D imaging technique often used to image material samples. The Advanced Light Source at Berkeley National Laboratory houses a synchroton-based &mu;-CT instrument which produces high volumes of data at a fast rate. This has led to the need for image processing techniques capable of extracting valuable information in large complex data sets. Image segmentation is an important processing step which separates various components in an image. Graph-based segmentation algorithms have been used for many years, with current interest primarily in designing algorithms which can handle large data sets. Recent approaches using Markov Random Fields (MRFs) exploit local properties of MRFs to run computations in parallel. In this project, we developed an image segmentation algorithm using a hypergraph-based MRF model. The algorithm is coded in C++ and preliminary results indicate that this generalized model improves precision of the segmentation of &mu;-CT images. We still have a lot left to do, but we are excited about the results so far!</p></article><article id="17">
+    
+    <a class="image"><img src="../../../static/images/projects/andrew_and_jasmin.jpg" /></a>
+    <h2 class="h3">Mean-Shift Clustering in C++</h2><h3 class="h4">Students: Andrew &amp; Jasmin</h3><h4 class="h5">Majors: Computer Science &amp; Mathematics</h4><p>In the VFP image segmentation algorithm, we applied the k-means clustering algorithm to create the hypergraph model for the image. In other hypergraph-based segmentation algorithms, mean-shift clustering also produced great results. However, we did not find a suitable C++ implementation of the mean-shift algorithm. Andrew and Jasmin are working together to understand the Python implementation of the mean-shift algorithm and bandwidth approximation in order to reproduce it in C++. We hope to then be able to incorporate this in the image segmentation algorithm and compare results to that of the k-means version.</p><p>Andrew and Jasmin are both supported by <a href="https://www.csustan.edu/AMP/join">CSU-LSAMP</a>.</p></article><article id="16">
+    
+    <a class="image"><img src="../../../static/images/projects/kevin.jpg" /></a>
+    <h2 class="h3">Pokemon GO! PVP Optimization</h2><h3 class="h4">Co-Advisors: Dr. Jon Brown (Bakersfield College)</h3><h3 class="h4">Students: Kevin, Pablo (BC), &amp; Ed (BC)</h3><h4 class="h5">Majors: Computer Science</h4><p>This project was brought to us by Dr. Brown from Bakersfield College who I met through the <a href="https://www.pacificmathalliance.org/">Pacific Math Alliance</a>. Funny enough, Dr. Brown is also an alumnus from Stan State! He has worked with BC students in the past to apply game theory to analyze <a href="https://www.pokemongolive.com/en/">Pokemon GO!</a>. In this project, we are interested in analyzing PVP battles in which you choose three of your Pokemon to fight three of your opponent&#39;s Pokemon. You can swap between any of your three Pokemon throughout the battle and can shield against charge attacks exactly twice. The player wins if they defeat all their opponent&#39;s Pokemon, or if the match time ends and they have the most Pokemon/health remaining.</p><p>Kevin is supported by the <a href="https://www.csustan.edu/STEM-success/research-and-immersion-stem-excellence">Stan State RISE program</a>.</p></article><article id="15">
+    
+    <a class="image"><img src="../../../static/images/projects/jesselynn.png" /></a>
+    <h2 class="h3">Modeling Embryo Cell Migration and Adhesion</h2><h3 class="h4">Students: Jesselynn</h3><h4 class="h5">Majors: Mathematics</h4><p>In this collaboration, I have had so much fun learning about cellular biology from Jesselynn. Jesselynn is a Lab Assistant in Dr. Stephanie Woo&#39;s lab at UC Merced while being a full-time math major at Stan State. In the Woo Lab, Jesselynn captures videos of zebrafish embryo cells migrating to uniformly spread out before coming together to form an endodermal sheet. We are using Fiji/ImageJ to obtain data from these videos which we will then analyze in Python to better understand cell migration.</p><p>Jesselynn is supported by the <a href="https://www.csustan.edu/STEM-success/research-and-immersion-stem-excellence">Stan State RISE program</a>.</p><ul class="actions"><li><a class=" button"href="http://stephaniewoo.ucmerced.edu/">DR. WOO&#39;S LAB</a></li>
+    </ul></article><article id="14">
+    
+    <a class="image"><img src="../../../static/images/projects/shirley_and_aaron.png" /></a>
+    <h2 class="h3">Predictive Modeling of Mathematics Course Enrollment and Success</h2><h3 class="h4">Students: Aaron &amp; Sherly</h3><h4 class="h5">Majors: Mathematics</h4><p>We our working with <a href="https://www.csustan.edu/iea">Stan State&#39;s Institutional Effectiveness and Analytics (IEA)</a> team to study recent trends in our mathematics major courses. In recent semesters, the Mathematics Department has needed to offer more sections of lower and upper divison mathematics courses. This project aims to first apply statistical methods to analyze the recent increase in enrollment, and then we will later develop a Machine Learning model to predict enrollment rates for course offerings in the mathematics major.</p><p>Aaron &amp; Sherly are both supported as a PUMP Undergraduate Research Group (URG) and through the <a href="https://www.csustan.edu/STEM-success/research-and-immersion-stem-excellence">Stan State RISE program</a>.</p><ul class="actions"><li><a class=" button"href="http://www.pump-math.org/undergraduate-research-groups">PUMP PROGRAM</a></li>
+    </ul></article><article id="13">
+    
+    <a class="image"><img src="../../../static/images/projects/rommell.jpg" /></a>
+    <h2 class="h3">Predictive Modeling of Track Performances</h2><h3 class="h4">Students: Rommell</h3><h4 class="h5">Majors: Physics</h4><p>Rommell has a passion for running track, he was an all-star athlete in high school and even competed on Stan State&#39;s track team. <a href="http://athletic.net">Using data from Athletic.net</a>, we are analyzing how an athlete&#39;s 800 meter time is related to their gender, grade level, and season records for the 400 meter and/or 1600 meter. It is often believed that there are strong correlations between these events, the best 400m runners often do very well in the 800m and similarly for the 1600m. We have put this project on pause at the moment, but we have managed to get about 40,000 data points to work with so far and have started cleaning it up for analysis.</p><p>Rommell is in the Cal-Bridge program for undergraduates studying astronomy and/or physics.</p><ul class="actions"><li><a class=" button"href="https://www.cpp.edu/calbridge/">CAL-BRIDGE</a></li>
+    </ul></article></div></section></div>
             </div>
-            
-            <div id="sidebar">
-    <div class="inner">
-        
-        <nav id="menu">
+            <!-- Sidebar --><div id="sidebar">
+    <div class="inner"><nav id="menu">
     <header class="major">
         <h2>Menu</h2>
     </header>
     <ul>
-        <li><a href="../../../index.html">Homepage</a></li>
+        <li><a href="../../../home.html">Homepage</a></li>
         <li>
             <span class="opener">Events</span>
             <ul>
-                <li><a href="../../../events/upcoming.html">Upcoming Events</a></li>
+                <li><a href="../../../events/future.html">Upcoming Events</a></li>
                 <li><a href="../../../events/past.html">Past Events</a></li>
             </ul>
         </li>
@@ -202,26 +79,22 @@
         <li>
             <span class="opener">Research</span>
             <ul>
-                <li><a href="../current.html">Current
-                        Undergraduate Projects</a></li>
-                <li><a href="../former.html">Former
-                        Undergraduate Projects</a></li>
-                <li><a href="../../other.html">Other Projects</a>
+                <li><a href="../current.html">Current Undergraduate Projects</a>
                 </li>
+                <li><a href="../former.html">Former Undergraduate Projects</a></li>
+                <li><a href="../../other.html">Other Projects</a></li>
             </ul>
         </li>
         <li>
             <span class="opener">Mentorship Groups</span>
             <ul>
-                <li><a href="../../../mentor-groups/math.html">For Mathematics</a></li>
-                <li><a href="../../../mentor-groups/stan.html">For Stan State
-                        Students</a></li>
+                <li><a href="../../../mentor_groups/math.html">For Mathematics</a></li>
+                <li><a href="../../../mentor_groups/stan.html">For Stan State Students</a></li>
             </ul>
         </li>
         <li><a href="../../../about.html">About Me</a></li>
     </ul>
-</nav>
-        <!-- Section -->
+</nav><!-- Section -->
         <section>
             <header class="major">
                 <h2>Get in touch</h2>
@@ -231,16 +104,10 @@
                     <a href="mailto:jdesilva1@csustan.edu">jdesilva1[at]csustan.edu</a>
                 </li>
             </ul>
-        </section>
-        
-        <footer id="footer">
-    <p class="copyright">&copy; Jessica De Silva's Homepage. All rights reserved. Design:
-        <a href="https://html5up.net">HTML5 UP</a>.
-    </p>
-</footer>
-    </div>
-</div>
-        </div>
+        </section><footer id="footer">
+    <p class="copyright">&copy; Jessica De Silva's Homepage. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+</footer></div>
+</div></div>
 
         <!-- Scripts -->
         <script src="../../../static/js/jquery.min.js"></script>
@@ -248,8 +115,6 @@
         <script src="../../../static/js/breakpoints.min.js"></script>
         <script src="../../../static/js/util.js"></script>
         <script src="../../../static/js/main.js"></script>
-        
-        
-    </body>
+        <!-- Additional scripts --></body>
 
 </html>
