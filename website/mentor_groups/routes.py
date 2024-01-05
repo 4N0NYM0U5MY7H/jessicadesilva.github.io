@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Mentor groups section, including math and stan."""
+"""Routes for the mentor groups section of the website."""
 from flask import Blueprint, render_template
 
 blueprint = Blueprint(

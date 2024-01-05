@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Research section, including current and former undergraduate projects."""
+"""Routes for the research projects section of the website."""
 import os
 from http import HTTPStatus
 
@@ -12,9 +12,7 @@ from website.research.utils import (
     create_output_dict,
     image_folder,
     poster_pages,
-    set_image_select_options,
-    set_status_id_select_options,
-    set_type_id_select_options,
+    set_select_options,
 )
 from website.utils import clean_input, dev_utils
 
@@ -84,24 +82,28 @@ def project(poster: str):
 @blueprint.route("/add_project.html", methods=["GET", "POST"])
 def add_project():
     form = ProjectForm()
-    set_type_id_select_options(form)
-    set_status_id_select_options(form)
-    set_image_select_options(form)
+    set_select_options(form)
 
     if form.validate_on_submit():
+        # No image selected or uploaded
+        # Use default image
         if not form.image.data and not form.upload.data:
             default_image = "default.jpg"
 
+        # Existing image selected
         if form.image.data:
             filename = form.image.data
 
+        # New image uploaded
+        # Save image to disk
+        # NOTE: If both image and upload are selected, upload takes precedence
         if form.upload.data:
             file = form.upload.data
             filename = secure_filename(file.filename)
             try:
                 file.save(os.path.join(image_folder(), filename))
                 flash("File successfully uploaded.", "success")
-            except Exception as e:
+            except OSError as e:
                 flash(f"500: {e}", "error")
                 abort(HTTPStatus.INTERNAL_SERVER_ERROR)
 
@@ -137,9 +139,17 @@ def edit_project(project_id: int):
         abort(HTTPStatus.NOT_FOUND)
 
     form = ProjectForm()
-    set_type_id_select_options(form)
-    set_status_id_select_options(form)
-    set_image_select_options(form)
+    set_select_options(form)
+
+    form.type_id.data = project.type_id
+    form.status_id.data = project.status_id
+    form.image.data = project.image
+    form.advisors.data = project.advisors
+    form.students.data = project.students
+    form.majors.data = project.majors
+    form.title.data = project.title
+    form.description.data = project.description
+    form.link.data = project.link
 
     if form.validate_on_submit():
         filename = None
@@ -152,6 +162,7 @@ def edit_project(project_id: int):
             except OSError as e:
                 flash(f"500: {e}", "error")
                 abort(HTTPStatus.INTERNAL_SERVER_ERROR)
+
         project.update(
             commit=True,
             type_id=form.type_id.data,
@@ -168,20 +179,6 @@ def edit_project(project_id: int):
             link=clean_input(form.link.data, allow_tags="a"),
         )
         flash(f"{clean_input(form.title.data)} successfully updated.", "success")
-        return (
-            render_template("research/edit_project.j2", project=project, form=form),
-            HTTPStatus.OK,
-        )
-
-    form.type_id.data = project.type_id
-    form.status_id.data = project.status_id
-    form.image.data = project.image
-    form.advisors.data = project.advisors
-    form.students.data = project.students
-    form.majors.data = project.majors
-    form.title.data = project.title
-    form.description.data = project.description
-    form.link.data = project.link
 
     return (
         render_template("research/edit_project.j2", project=project, form=form),

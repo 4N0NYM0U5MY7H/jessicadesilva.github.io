@@ -55,6 +55,12 @@ def set_image_select_options(form) -> None:
     ]
 
 
+def set_select_options(form) -> None:
+    set_type_id_select_options(form)
+    set_status_id_select_options(form)
+    set_image_select_options(form)
+
+
 def create_output_dict(project: Project) -> dict:
     return {
         "id": project.id,

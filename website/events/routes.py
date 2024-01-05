@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Events module, including scheduled and past events."""
+"""Routes for the events section of the website."""
 from datetime import datetime
 from http import HTTPStatus
 
